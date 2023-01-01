@@ -54,3 +54,25 @@ npm install nodemon --save-dev
 ```sh
 "start":"nodemon server.js",
 ```
+
+# 10 Fetch Products from backend
+
+- in package.json of front end, add "proxy":"http://localhost:5000"
+- in front end, run command
+
+```sh
+npm install axios
+```
+
+- HomeScreen.js apply axios
+
+```js
+const [products, setProducts] = useState([]);
+useEffect(() => {
+  const fetchData = async () => {
+    const result = await axios.get('/api/products');
+    setProducts(result.data);
+  };
+  fetchData();
+}, []);
+```
