@@ -117,12 +117,6 @@ function HomeScreen() {
   }, []);
 ```
 
-- logger reducer
-
-```sh
-npm install use-reducer-logger --force
-```
-
 ```js
   return (
     <div>
@@ -134,4 +128,18 @@ npm install use-reducer-logger --force
           <div>{error}</div>
         ) : (
           products.map((product) => (
+```
+
+# 12 Add bootstrap
+
+```sh
+npm install bootstrap
+```
+
+```sh
+npm install react-bootstrap --force
+```
+
+```sh
+npm install react-router-bootstrap --force
 ```
