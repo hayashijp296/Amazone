@@ -36,3 +36,21 @@ npm init
 ```sh
 npm install express
 ```
+
+- create server.js file and run it
+
+```sh
+node server.js
+```
+
+- user nodemon for dev (auto run)
+
+```sh
+npm install nodemon --save-dev
+```
+
+- in package.json script, write
+
+```sh
+"start":"nodemon server.js",
+```
