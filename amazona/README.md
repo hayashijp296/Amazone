@@ -143,3 +143,8 @@ npm install react-bootstrap --force
 ```sh
 npm install react-router-bootstrap --force
 ```
+
+# 13 Create Product Component
+
+- create product component
+- create Rating component
