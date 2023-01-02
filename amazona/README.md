@@ -177,3 +177,9 @@ npm install react-helmet-async
 # 18 (Super important) Create Cart Screen
 
 - create CartScreen
+
+# 19 Complete cart screen
+
+- implement increment button
+- implement decrement button
+- implement add to cart on homepage

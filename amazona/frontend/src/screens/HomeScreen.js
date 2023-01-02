@@ -2,10 +2,10 @@ import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Product from './components/Product';
+import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
-import LoadingBox from './components/LoadingBox';
-import MessageBox from './components/MessageBox';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
