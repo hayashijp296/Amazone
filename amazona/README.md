@@ -148,3 +148,12 @@ npm install react-router-bootstrap --force
 
 - create product component
 - create Rating component
+
+# 14 Add Product Screen
+
+- display picture on Col md-6, info on Col md-3, and status on Col md-3
+- install helmet on front end to display product name on title when move to product detail screen
+
+```sh
+npm install react-helmet-async
+```
