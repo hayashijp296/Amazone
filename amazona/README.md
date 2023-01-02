@@ -173,3 +173,7 @@ npm install react-helmet-async
 # 17 (Super important) Complete add to cart functionality
 
 - fix logic in StoreProvider
+
+# 18 (Super important) Create Cart Screen
+
+- create CartScreen
