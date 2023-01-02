@@ -157,3 +157,9 @@ npm install react-router-bootstrap --force
 ```sh
 npm install react-helmet-async
 ```
+
+# 15 Create Loading and Message Component
+
+- create utils file to handle error from server
+- create LoadingBox used Spinner from bootstrap
+- crate MessageBox used Alert from bootstrap
