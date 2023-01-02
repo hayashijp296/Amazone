@@ -187,3 +187,18 @@ npm install react-helmet-async
 # 20 Create Signin Screen
 
 - create signin screen
+
+# 21 Create MongoDB
+
+- create env
+- run command in backend
+
+```sh
+npm install mongoose
+```
+
+- run command in backend to load env
+
+```sh
+npm install dotenv
+```
