@@ -169,3 +169,7 @@ npm install react-helmet-async
 - add nav cart to App.js
 - create Store.js (App context) export Store and export function StoreProvider
 - add useReducer to Cart
+
+# 17 (Super important) Complete add to cart functionality
+
+- fix logic in StoreProvider
