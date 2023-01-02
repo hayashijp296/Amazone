@@ -207,3 +207,14 @@ npm install dotenv
 
 - use seedRouter to generate data to MongoDB
 - create product Routes
+
+# 23 Generate sample users
+
+- create user model
+
+```sh
+npm i bcryptjs
+```
+
+- seed sample users
+- create user routes
