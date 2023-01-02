@@ -218,3 +218,13 @@ npm i bcryptjs
 
 - seed sample users
 - create user routes
+
+# 24 Implement Signin API
+
+```sh
+npm install express-async-handler
+```
+
+```sh
+npm install jsonwebtoken
+```
