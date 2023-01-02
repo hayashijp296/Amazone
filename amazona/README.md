@@ -202,3 +202,8 @@ npm install mongoose
 ```sh
 npm install dotenv
 ```
+
+# 22 Generate sample products
+
+- use seedRouter to generate data to MongoDB
+- create product Routes
