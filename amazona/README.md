@@ -163,3 +163,9 @@ npm install react-helmet-async
 - create utils file to handle error from server
 - create LoadingBox used Spinner from bootstrap
 - crate MessageBox used Alert from bootstrap
+
+# 16 (Super important) Create React Context for Card screen
+
+- add nav cart to App.js
+- create Store.js (App context) export Store and export function StoreProvider
+- add useReducer to Cart
