@@ -242,3 +242,5 @@ npm i react-toastify
 # 27 Create Sign Up Screen
 
 # 28 Select Payment method
+
+# 29 fix to run useNavigate()
