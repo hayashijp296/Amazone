@@ -10,7 +10,7 @@ import { Store } from '../Store';
 import CheckoutSteps from '../components/CheckoutSteps';
 
 export default function PlaceOrderScreen() {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
   const round2 = (num) => Math.round(num * 100 + Number.EPSILON) / 100;
