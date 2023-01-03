@@ -236,3 +236,5 @@ run in frontend to display alert
 ```sh
 npm i react-toastify
 ```
+
+# 26 Shipping Screen
