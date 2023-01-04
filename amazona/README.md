@@ -250,3 +250,5 @@ npm i react-toastify
 # 31 Create Order Screen
 
 # 33 Order History (skip 32 about paypal)
+
+# 34 Proflie
