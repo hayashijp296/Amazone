@@ -35,7 +35,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="d-flex flex-column site-container">
-        <ToastContainer position="bottom-center" limit={1} />
+        <ToastContainer position="top-center" autoClose={1000} limit={1} />
         <header>
           <Navbar bg="dark" variant="dark" expand="lg">
             <Container>

@@ -12,6 +12,7 @@ import Rating from '../components/Rating';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import { toast } from 'react-toastify';
 import { getError } from '../utils';
 const reducer = (state, action) => {
   switch (action.type) {
@@ -63,6 +64,8 @@ function ProductScreen() {
       type: 'CART_ADD_ITEM',
       payload: { ...product, quantity },
     });
+    toast.success('Added item successfully');
+
     navigate('/cart');
   };
 
