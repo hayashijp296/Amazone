@@ -252,3 +252,5 @@ npm i react-toastify
 # 33 Order History (skip 32 about paypal)
 
 # 34 Proflie
+
+# 37 Create Sidebar and Search Box

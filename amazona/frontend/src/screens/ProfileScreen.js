@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import { toast } from 'react-toastify';
 import { getError } from '../utils';
 import axios from 'axios';
+import LoadingBox from '../components/LoadingBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -60,47 +61,51 @@ export default function ProfileScreen() {
         <title>User Profile</title>
       </Helmet>
       <h1 className="my-3">User Profile</h1>
-      <form onSubmit={submitHandle}>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          ></Form.Control>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          ></Form.Control>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          ></Form.Control>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Confirm Password</Form.Label>
-          <Form.Control
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          ></Form.Control>
-        </Form.Group>
-        <div className="mb-3">
-          <Button type="submit">Update</Button>
-        </div>
-      </form>
+      {loadingUpdate ? (
+        <LoadingBox></LoadingBox>
+      ) : (
+        <form onSubmit={submitHandle}>
+          <Form.Group className="mb-3" controlId="name">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            ></Form.Control>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="email">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            ></Form.Control>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="password">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            ></Form.Control>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="password">
+            <Form.Label>Confirm Password</Form.Label>
+            <Form.Control
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            ></Form.Control>
+          </Form.Group>
+          <div className="mb-3">
+            <Button type="submit">Update</Button>
+          </div>
+        </form>
+      )}
     </div>
   );
 }
