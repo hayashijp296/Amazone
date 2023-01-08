@@ -258,3 +258,11 @@ npm i react-toastify
 # 38 Implement search function (not clear)
 
 # 39 Create Admin View
+
+# 40 Create Dashboard Screen (need confirm aggregation)
+
+- user react google chart in frontend
+
+```sh
+npm install --save react-google-charts
+```
