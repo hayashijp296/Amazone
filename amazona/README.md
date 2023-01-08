@@ -272,3 +272,5 @@ npm install --save react-google-charts
 # 42 Create Product
 
 # 43 Edit Product Screen
+
+# 44 Update Product
