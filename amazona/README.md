@@ -284,3 +284,5 @@ npm i cloudinary
 npm i streamifier
 npm i multer
 ```
+
+# 45.1 Fix bug cannot edit product category

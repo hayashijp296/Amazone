@@ -185,7 +185,7 @@ export default function ProductEditScreen() {
             <Form.Label>Category</Form.Label>
             <Form.Control
               value={category}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setCategory(e.target.value)}
               required
             ></Form.Control>
           </Form.Group>
