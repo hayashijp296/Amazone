@@ -274,3 +274,13 @@ npm install --save react-google-charts
 # 43 Edit Product Screen
 
 # 44 Update Product
+
+# 45 Upload image
+
+- install cloudinary in backend
+
+```sh
+npm i cloudinary
+npm i streamifier
+npm i multer
+```
