@@ -254,3 +254,5 @@ npm i react-toastify
 # 34 Proflie
 
 # 37 Create Sidebar and Search Box
+
+# 38 Implement search function (not clear)
