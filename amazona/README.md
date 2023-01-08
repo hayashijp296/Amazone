@@ -256,3 +256,5 @@ npm i react-toastify
 # 37 Create Sidebar and Search Box
 
 # 38 Implement search function (not clear)
+
+# 39 Create Admin View
