@@ -32,6 +32,15 @@ const reducer = (state, action) => {
       return { ...state, loadingCreate: false };
     case 'CREATE_FAIL':
       return { ...state, loadingCreate: false };
+    case 'DELETE_REQUEST':
+      return { ...state, loadingDelete: true, successDelete: false };
+
+    case 'DELETE_SUCCESS':
+      return { ...state, loadingDelete: false, successDelete: true };
+    case 'DELETE_FAIL':
+      return { ...state, loadingDelete: false, successDelete: false };
+    case 'DELETE_RESET':
+      return { ...state, loadingDelete: false, successDelete: false };
     default:
       return state;
   }
@@ -39,11 +48,21 @@ const reducer = (state, action) => {
 
 export default function ProductListScreen() {
   const navigate = useNavigate();
-  const [{ loading, error, products, pages, loadingCreate }, dispatch] =
-    useReducer(reducer, {
-      loading: true,
-      error: '',
-    });
+  const [
+    {
+      loading,
+      error,
+      products,
+      pages,
+      loadingCreate,
+      loadingDelete,
+      successDelete,
+    },
+    dispatch,
+  ] = useReducer(reducer, {
+    loading: true,
+    error: '',
+  });
 
   const { state } = useContext(Store);
   const { userInfo } = state;
@@ -60,8 +79,12 @@ export default function ProductListScreen() {
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
       } catch (error) {}
     };
-    fetchData();
-  }, [page, userInfo]);
+    if (successDelete) {
+      dispatch({ type: 'DELETE_SUCCESS' });
+    } else {
+      fetchData();
+    }
+  }, [page, userInfo, successDelete]);
 
   const createHandler = async () => {
     if (window.confirm('Are you sure you want to create')) {
@@ -83,6 +106,22 @@ export default function ProductListScreen() {
       }
     }
   };
+
+  const deleteHandler = async (product) => {
+    if (window.confirm('Are you sure you want to delete this product?')) {
+      try {
+        dispatch({ type: 'DELETE_REQUEST' });
+        await axios.delete(`/api/products/${product._id}`, {
+          headers: { Authorization: `Bearer ${userInfo.token}` },
+        });
+        toast.success('product deleted successfully');
+        dispatch({ type: 'DELETE_SUCCESS' });
+      } catch (error) {
+        toast.error(getError(error));
+        dispatch({ type: 'DELETE_FAIL' });
+      }
+    }
+  };
   return (
     <div>
       <Row>
@@ -98,6 +137,7 @@ export default function ProductListScreen() {
         </Col>
       </Row>
       {loadingCreate && <LoadingBox></LoadingBox>}
+      {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
@@ -130,6 +170,14 @@ export default function ProductListScreen() {
                       onClick={() => navigate(`/admin/product/${product._id}`)}
                     >
                       Edit
+                    </Button>
+                    &nbsp;
+                    <Button
+                      type="button"
+                      variant="light"
+                      onClick={() => deleteHandler(product)}
+                    >
+                      Delete
                     </Button>
                   </td>
                 </tr>

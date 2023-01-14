@@ -286,3 +286,11 @@ npm i multer
 ```
 
 # 45.1 Fix bug cannot edit product category
+
+# 46 Delete product
+
+# 47 List Orders
+
+- map is ok () ? {}
+- data is ok data ? {data}
+- need confirm more
